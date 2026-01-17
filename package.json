@@ -1,0 +1,13 @@
+{
+  "name": "subway-arrivals",
+  "version": "1.0.0",
+  "description": "Display upcoming subway arrivals for Columbus Circle-59 St",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "gtfs-realtime-bindings": "^1.1.1"
+  }
+}

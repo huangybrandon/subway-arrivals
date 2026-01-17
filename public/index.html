@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Columbus Circle-59 St - Subway Arrivals</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #1a1a2e;
+      color: #fff;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    #arrivals {
+      display: flex;
+      gap: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .current-time {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .update-time {
+      font-size: 0.85rem;
+      color: #888;
+    }
+
+    .direction-section {
+      flex: 1;
+    }
+
+    .direction-header {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #aaa;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #333;
+    }
+
+    .arrival-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .arrival-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      background: #252540;
+      border-radius: 8px;
+    }
+
+    .line-badge {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: #fff;
+    }
+
+    /* MTA line colors */
+    .line-1 { background: #ee352e; }
+    .line-2 { background: #ee352e; }
+    .line-3 { background: #ee352e; }
+    .line-A { background: #0039a6; }
+    .line-C { background: #0039a6; }
+    .line-B { background: #ff6319; }
+    .line-D { background: #ff6319; }
+
+    .direction-label {
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    .arrival-time {
+      margin-left: auto;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .arrival-time.arriving {
+      color: #4ade80;
+    }
+
+    .no-arrivals {
+      color: #666;
+      font-style: italic;
+      padding: 12px;
+    }
+
+    .error {
+      background: #4a1a1a;
+      border: 1px solid #ee352e;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .loading {
+      text-align: center;
+      color: #888;
+      padding: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="current-time" id="currentTime"></div>
+      <h1>Columbus Circle-59 St</h1>
+      <div class="update-time" id="updateTime">Loading...</div>
+    </header>
+
+    <div id="arrivals">
+      <div class="loading">Fetching arrivals...</div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
